@@ -1,3 +1,5 @@
+#Nome--
+
 from datetime import datetime
 import os
 
@@ -31,14 +33,13 @@ def escolha():
             print(" ***** Mês-ano não cadastrado! *****")
     elif opcao == 3:
         ano = input("Digite ano a ser comparado:")
-        
     elif opcao == 4:
         print("Itens armazenados dentro do TxT:")
-        def read_text_file(file_path): 
-            with open(file_path, 'r') as f: 
+        def arquivo(caminho): 
+            with open(caminho, 'r') as f: 
                 print(f.read()) 
         for file in os.listdir(): 
             if file.endswith(".txt"): 
-                file_path = f"{path}\{file}"
-                read_text_file(file_path)    
+                caminho = f"{path}\{file}"
+                arquivo(caminho)    
 escolha()
